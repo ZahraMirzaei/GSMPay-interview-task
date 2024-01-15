@@ -1,33 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TODO List app
+
+This project is a simple Todo list app that allows users to define and manage their tasks. The application is built using [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/). For state management, [Zustand](https://zustand.surge.sh/) is utilized.
+
+## Features
+
+1. **Add New Tasks:** Users can define a desired number of tasks in the "Add" section. Task names can only consist of Persian letters and numbers.
+
+2. **Task Workflow:**
+
+   - Tasks are initially added to the "In Progress" section upon creation.
+   - Clicking or tapping on a task in the "In Progress" section moves it to the "Done" section.
+   - Clicking or tapping on a task in the "Done" section returns the task to the "In Progress" section.
+
+3. **Success Chart:**
+
+   - A success chart displays the number of tasks in both the "In Progress" and "Done" sections.
+
+4. **Local Storage:**
+   - Task information is stored locally, allowing users to view previous tasks upon returning to the application.
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/): A React framework for building web applications.
+- [TypeScript](https://www.typescriptlang.org/): A statically typed superset of JavaScript.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.
+- [Zustand](https://zustand.surge.sh/): A small, fast, and scaleable state management library for React.
+
+## Design Mockups
+
+Explore the design mockups on Figma to get a better understanding of the visual aspects of the project.
+
+[Figma Project](https://www.figma.com/file/xjGO9zOUQa5238vYtBvEGp/Gsm-Front-Challenge?type=design&node-id=0-1&mode=design&t=E48XMS6XH3EwKs0E-0)
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone https://github.com/ZahraMirzaei/GSMPay-interview-task
+   cd GSMPay-interview-task
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Run the development server.
 
-## Learn More
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Feel free to explore and enhance the application based on your needs!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+___
+___
+
 
 ## Deploy on Vercel
 
