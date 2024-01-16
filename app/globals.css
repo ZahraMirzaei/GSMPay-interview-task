@@ -1,34 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* ------------------------------ CSS Variables ----------------------------- */
 :root {
-  --font-color:#2f3a58;
+  --font-color: #2f3a58;
   --font-color-rbg: 47, 58, 88;
   --font-color-opacity: 0.8;
   --background-color: #fff;
   --light-violet: #3b11cc;
   --dark-violet: #4321b8;
 }
-
+/* ------------------------- Tailwind: Add class utilities ------------------------- */
 @layer utilities {
   .container {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    justify-content: flex-end;
-    /* align-items: flex-end; */
-    flex:1 0 0;
+    flex-wrap: wrap;
+    flex: 1 0 0;
     border-radius: 8px;
     border: 1px solid rgba(var(--font-color-rbg), 0.1);
     padding: 1rem;
-    align-self: stretch;
+    margin-top: 36px;
   }
+}
+/* ---------------------------------- Reset Styles --------------------------------- */
+html,
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 body {
   direction: rtl;
   color: var(--font-color);
   background: var(--background-color);
-  padding-top: 80px;
 }
+/* -------------------------- Doughnut Chart Styles ------------------------- */
+#d-chart {
+  position: relative;
+}
+
+#d-chart::before {
+  content: "";
+  width: 50px;
+  height: 25px;
+  background-color: rgba(var(--font-color-rbg), 0.1);
+  border-radius: 100px 100px 0 0;
+  display: block;
+  position: absolute;
+  bottom: 4px;
+  left:64%;
+  transform: translateX(-50px);
+}
+
+canvas {
+  font-family: inherit !important;
+}
+/* -------------------------------------------------------------------------- */
