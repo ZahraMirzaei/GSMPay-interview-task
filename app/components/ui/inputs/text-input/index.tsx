@@ -2,18 +2,29 @@
 import React from "react";
 import { useInputValidation } from "@/app/components/ui/inputs/text-input/useInputValidation";
 
-export const TextInput = () => {
+interface ITextInputProps {
+  placeHolder: string;
+}
+
+export const TextInput: React.FC<ITextInputProps> = ({
+  placeHolder,
+  ...rest
+}) => {
   const { inputValue, errorMessage, handleInputChange } = useInputValidation();
   return (
-    <div className='flex flex-col gap-y-1 h-20 flex-1'>
+    <div className='flex-[3] gap-y-1 min-w-48'>
       <input
-        className='p-4 border border-black/20 rounded-lg text-right'
+        className='w-full p-3 border border-black/20 rounded-lg text-right focus:shadow-lg '
         type='text'
         value={inputValue}
-        placeholder='امروز میخوام...'
+        placeholder={placeHolder}
         onChange={handleInputChange}
+        {...rest}
       />
-      {errorMessage ? <span className='text-red-500'>{errorMessage}</span> : null}
+      <br />
+      {errorMessage ? (
+        <span className='text-red-500'>{errorMessage}</span>
+      ) : null}
     </div>
   );
 };
