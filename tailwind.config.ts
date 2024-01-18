@@ -9,11 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-linear': 'linear-gradient(180deg, var(--light-violet) 0%, var(--dark-violet) 100%)'
       },
+
+      colors: {
+        "black": "#2f3a58"
+      },
+
+      textOpacity: {
+        '60': '0.6',
+        '80': '0.8',
+      },
+      
+      screens: {
+        "xs": "510px"
+      }
     },
+    boxShadow: {
+      "md": "0px 12px 40px 0px rgba(45, 14, 152, 0.10)"
+    }
   },
   plugins: [],
 }
