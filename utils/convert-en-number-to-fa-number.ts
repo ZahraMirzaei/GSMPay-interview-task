@@ -1,4 +1,4 @@
-export function convertToPersianNumber(number: string|number) {
+export function convertToPersianNumber(number: string | number) {
   const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
   return String(number).replace(
     /\d/g,
