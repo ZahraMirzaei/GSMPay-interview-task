@@ -2,6 +2,12 @@
 
 This project is a simple Todo list app that allows users to define and manage their tasks. The application is built using [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/). For state management, [Zustand](https://zustand.surge.sh/) is utilized.
 
+## Demo
+
+you can see the app demo at:
+
+[GSMPay.co](https://gsm-pay-interview-task.vercel.app/)
+
 ## Features
 
 1. **Add New Tasks:** Users can define a desired number of tasks in the "Add" section. Task names can only consist of Persian letters and numbers.
