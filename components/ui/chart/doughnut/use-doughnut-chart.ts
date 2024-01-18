@@ -1,15 +1,18 @@
 import ChartJS from "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { convertToPersianNumber } from "@/utils/convert-en-number-to-fa-number";
+import { useTodoReport } from "@/components/report-chart/use-todo-report";
 
 export const useDoughnutChart = () => {
+  /* ------------------------------ Dependencies ------------------------------ */
+  const { donePercentage, remainingPercentage } = useTodoReport();
   /* --------------------------- Chart registeration -------------------------- */
   ChartJS.register(ChartDataLabels);
   /* --------------------------- Chart configuration -------------------------- */
   const data = {
     datasets: [
       {
-        data: [25, 75],
+        data: [remainingPercentage, donePercentage],
         backgroundColor: ["#2F3A58", "#00B8A9"],
         borderColor: ["#fff", "#fff"],
         borderWidth: 4,
