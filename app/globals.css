@@ -35,6 +35,7 @@ body {
   direction: rtl;
   color: var(--font-color);
   background: var(--background-color);
+  font-family: var(--font-vazirmatn);
 }
 /* -------------------------- Doughnut Chart Styles ------------------------- */
 #d-chart {
