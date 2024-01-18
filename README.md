@@ -4,7 +4,7 @@ This project is a simple Todo list app that allows users to define and manage th
 
 ## Demo
 
-you can see the app demo at:
+you can see the app demo at this URL:
 
 [GSMPay.co](https://gsm-pay-interview-task.vercel.app/)
 
