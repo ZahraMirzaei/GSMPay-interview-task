@@ -1,6 +1,7 @@
 "use client";
 import { AddNewTask } from "@/components/add-new-task";
 import { ReportChart } from "@/components/report-chart";
+import { DoingTodos } from "@/components/doing-todos";
 import HydrationZustand from "@/utils/hydration-zustand";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
           <AddNewTask />
           <ReportChart />
         </div>
+        <DoingTodos />
       </HydrationZustand>
     </main>
   );
