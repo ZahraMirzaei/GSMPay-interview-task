@@ -2,6 +2,12 @@
 
 This project is a simple Todo list app that allows users to define and manage their tasks. The application is built using [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/). For state management, [Zustand](https://zustand.surge.sh/) is utilized.
 
+## Demo
+
+you can see the app demo at this URL:
+
+[GSMPay.co](https://gsm-pay-interview-task.vercel.app/)
+
 ## Features
 
 1. **Add New Tasks:** Users can define a desired number of tasks in the "Add" section. Task names can only consist of Persian letters and numbers.
@@ -56,13 +62,3 @@ Explore the design mockups on Figma to get a better understanding of the visual 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Feel free to explore and enhance the application based on your needs!
-
-___
-___
-
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
