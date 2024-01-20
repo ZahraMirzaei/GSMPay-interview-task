@@ -4,25 +4,27 @@ import type { ITodo } from "@/type/todo";
 
 interface CheckboxProps {
   task: ITodo;
+  handleChange: () => void;
 }
 
-export const Checkbox: React.FC<CheckboxProps> = ({ task }) => {
-  const { title, isDone } = task;
+export const Checkbox: React.FC<CheckboxProps> = ({
+  task,
+  handleChange,
+  ...props
+}) => {
+  const { id, title, isDone } = task;
 
   return (
-    <label className='flex items-center space-x-2 flex-1'>
+    <label htmlFor={id} className='flex items-center space-x-2 flex-1'>
       <input
-        name="todo checkbox"
+        className='peer appearance-none'
         type='checkbox'
-        className='hidden'
+        id={id}
+        checked={isDone}
+        onChange={handleChange}
+        {...props}
       />
-      <span
-        className={`w-5 h-5 flex items-center justify-center border-2 rounded-full cursor-pointer ${
-          isDone ? "bg-current border-black" : "border-gray-400"
-        }`}
-      >
-        {isDone && <CheckedIcon className='w-4 h-4 text-white' />}
-      </span>
+      <CheckedIcon className={`rounded-full text-transparent w-5 h-5 peer-checked:text-white border border-black/80 ${isDone ? "bg-black/80": "" }`} />
       <span
         className={`${
           isDone
@@ -35,3 +37,9 @@ export const Checkbox: React.FC<CheckboxProps> = ({ task }) => {
     </label>
   );
 };
+
+// bg-white
+// focus:outline-none focus:ring-offset-0 focus:ring-1 focus:ring-black/10
+// checked:bg-black/90 checked:border-0
+// disabled: border - steel - 400 disabled: bg - steel - 400
+// appearance-none
