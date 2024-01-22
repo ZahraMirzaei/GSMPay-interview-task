@@ -17,6 +17,8 @@ you can see the app demo at this URL:
    - Tasks are initially added to the "In Progress" section upon creation.
    - Clicking or tapping on a task in the "In Progress" section moves it to the "Done" section.
    - Clicking or tapping on a task in the "Done" section returns the task to the "In Progress" section.
+   - You can delete each task that is presented in the "In Progress" column.
+   - When you click or tap on the delete button, you have 10 seconds to undo the action by clicking on the undo button.
 
 3. **Success Chart:**
 
