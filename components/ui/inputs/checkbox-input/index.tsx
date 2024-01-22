@@ -15,7 +15,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   const { id, title, isDone } = task;
 
   return (
-    <label htmlFor={id} className='flex items-center space-x-2 flex-1'>
+    <label htmlFor={id} className='flex items-center space-x-2 flex-1 cursor-pointer'>
       <input
         className='peer appearance-none'
         type='checkbox'
@@ -37,9 +37,3 @@ export const Checkbox: React.FC<CheckboxProps> = ({
     </label>
   );
 };
-
-// bg-white
-// focus:outline-none focus:ring-offset-0 focus:ring-1 focus:ring-black/10
-// checked:bg-black/90 checked:border-0
-// disabled: border - steel - 400 disabled: bg - steel - 400
-// appearance-none

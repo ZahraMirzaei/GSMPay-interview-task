@@ -1,11 +1,11 @@
 import React from "react";
-
+/* -------------------------------- Interface ------------------------------- */
 interface IBoxContainer {
   title: string;
   children: React.ReactNode;
   className?: string;
 }
-
+/* ----------------------------- Implementation ----------------------------- */
 export const BoxContainer: React.FC<IBoxContainer> = ({ title, children, className="" }) => {
   return (
     <div className={`container ${className}`}>
