@@ -1,22 +1,13 @@
 import React from "react";
-import { Checkbox } from "@/components/ui/inputs";
 import type { ITodo } from "@/type/todo";
-import { useTodoStore } from "@/store/todo-store";
-import { OutlineButton } from "@/components/ui/buttons";
 import { EMPTY_LIST } from "@/utils/constant";
+import { TodoListItem } from "@/components/ui/list/list-item/todo-list-item";
 
 interface IListProps {
   todoList: ITodo[] | [];
-  handleDeleteClick?: (todoId: string) => void;
-  Icon?: React.ReactNode;
 }
 
-export const List: React.FC<IListProps> = ({
-  todoList,
-  handleDeleteClick,
-  Icon,
-}) => {
-  const toggleTodo = useTodoStore((state) => state.toggleTodo);
+export const List: React.FC<IListProps> = ({ todoList }) => {
   return (
     <ul>
       {todoList.length >= 1 ? (
@@ -26,14 +17,8 @@ export const List: React.FC<IListProps> = ({
               index === todoList.length - 1 ? "last:border-b-0" : ""
             }`}
             key={task.id}
-            onClick={() => toggleTodo(task.id)}
           >
-            <Checkbox task={task} />
-            {Icon && handleDeleteClick ? (
-              <OutlineButton onClick={() => handleDeleteClick(task.id)}>
-                {Icon}
-              </OutlineButton>
-            ) : null}
+            <TodoListItem todo={task} />
           </li>
         ))
       ) : (
