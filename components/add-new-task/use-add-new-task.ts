@@ -31,7 +31,7 @@ export const useAddNewTask = () => {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     validateFarsiInput(event.currentTarget.value)
   }
-  /* -------------------------------------------------------------------------- */
-  return { inputValue, setInputValue, isInputValid, handleInputChange, handleFormSubmit };
+  /* --------------------------------- Returns -------------------------------- */
+  return { inputValue,isInputValid, setInputValue, handleInputChange, handleFormSubmit };
   /* -------------------------------------------------------------------------- */
 };

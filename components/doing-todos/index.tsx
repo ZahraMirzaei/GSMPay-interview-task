@@ -5,7 +5,8 @@ import { useDoingTodos } from "@/components/doing-todos/use-doing-todos";
 import { DOING_TASK_TITLE } from "@/utils/constant";
 
 export const DoingTodos = () => {
-  const { doingList, deleteTodo } = useDoingTodos();
+  const { doingList } = useDoingTodos();
+  
   return (
     <BoxContainer title={DOING_TASK_TITLE}>
       <List

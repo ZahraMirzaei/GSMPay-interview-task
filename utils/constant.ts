@@ -13,6 +13,8 @@ const INPUT_ERROR_MSG = "تنها حروف فارسی و اعداد مجاز ه�
 const ADD_BUTTON = "افزودن"
 /* ---------------------------------- Text ---------------------------------- */
 const FROM = "از"
+const UNDO_TEXT = "ثانیه برای بازگرداندن فرصت دارید"
+const UNDO_COUNTDOWN_MILI_SEC = 10000;
 
 export {
   EMPTY_LIST,
@@ -24,5 +26,7 @@ export {
   SUCCESS_REPORT_TITLE,
   DOING_TASK_TITLE,
   DONE_TASK_TITLE,
-  FROM
+  FROM,
+  UNDO_TEXT,
+  UNDO_COUNTDOWN_MILI_SEC
 }
