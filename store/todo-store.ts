@@ -7,7 +7,6 @@ interface ITodoWithTimer { todoId: string; timerId: NodeJS.Timeout }
 
 interface TodoState {
   todosList: ITodo[] | [];
-  undoTimerId: NodeJS.Timeout | null;
   undoList: ITodoWithTimer[] | [];
   addTodo: (title: string) => void;
   toggleTodo: (todoId: string) => void;
@@ -21,7 +20,6 @@ export const useTodoStore = create<TodoState>()(
     (set, get) => ({
       /* ---------------------------------- State --------------------------------- */
       todosList: [],
-      undoTimerId: null,
       undoList: [],
       /* --------------------------------- Actions -------------------------------- */
       addTodo: (title: string) => {
@@ -69,5 +67,3 @@ export const useTodoStore = create<TodoState>()(
     { name: 'todoStore' }
   )
 );
-
-useTodoStore.subscribe

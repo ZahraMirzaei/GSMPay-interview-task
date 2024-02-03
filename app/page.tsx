@@ -11,7 +11,6 @@ export default function Home() {
       <HydrationZustand>
         <div className='flex flex-wrap w-full gap-x-9'>
           <AddNewTask />
-
           <ReportChart />
         </div>
         <DoingTodos />
